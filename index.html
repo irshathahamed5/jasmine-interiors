@@ -15,17 +15,18 @@
             color: white;
         }
         .navbar {
-            padding: 10px; /* Add padding for better spacing */
+            padding: 10px;
         }
         .first-navbar {
-            height: 100px; /* Set the first navbar height */
+            height: 100px;
         }
         .second-navbar {
-            margin-top: 100px; /* Adjust margin to make second navbar visible */
-            background-color: #1f2d3b; /* Background color for second navbar */
+            top: 100px; 
+            height: 100px;/* Adjust position below the first navbar */
+            background-color: #1f2d3b;
         }
         .navbar h1 {
-            font-family: 'Cormorant Garamond', serif; /* Apply classic style font */
+            font-family: 'Cormorant Garamond', serif;
             color: #B68D40;
             margin-bottom: 0;
         }
@@ -34,47 +35,51 @@
             padding: 0;
             margin: 0;
             display: flex;
-            gap: 30px; /* Add space between list items */
-            flex-wrap: wrap; /* Allow wrapping on small screens */
+            gap: 30px;
+            flex-wrap: wrap;
         }
         .social-icons li {
-            color: #D6AD60; /* Set list item text color */
+            color: #D6AD60;
         }
         .social-icons a {
-            color: #D6AD60; /* Set link color */
+            color: #D6AD60;
             text-decoration: none;
-            font-size: 1.1rem; /* Default font size */
+            font-size: 1.1rem;
         }
         .social-icons a:hover {
             text-decoration: none;
             color: aliceblue;
         }
-        /* Styles for the second navbar */
         .second-navbar .navbar-nav {
             display: flex;
-            justify-content: space-around; /* Space items evenly */
+            justify-content: space-around;
             width: 100%;
-           
         }
-        /* Media query for screens less than 576px (bootstrap 'sm' breakpoint) */
+        .banner {
+            height: 500px; /* Fixed height for the banner */
+            width: 100%; /* Full width */
+            background-image: url('565.png'); /* Set your banner image here */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the image */
+        }
         @media (max-width: 575.98px) {
             .navbar {
-                height: auto; /* Adjust height for mobile */
-                padding: 15px; /* Reduce padding for smaller screens */
+                height: auto;
+                padding: 15px;
             }
             .navbar .col-md-6 {
-                flex: 0 0 100%; /* Stack columns vertically */
+                flex: 0 0 100%;
                 max-width: 100%;
-                text-align: center; /* Center text for mobile */
+                text-align: center;
             }
             .social-icons {
-                justify-content: center; /* Center the icons on mobile */
+                justify-content: center;
             }
             .social-icons a {
-                font-size: 1.2rem; /* Adjust icon size for mobile */
+                font-size: 1.2rem;
             }
             .social-icons a span {
-                display: none; /* Hide text on mobile */
+                display: none;
             }
         }
     </style>
@@ -92,7 +97,7 @@
                         <li><a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a></li>
                         <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> <span>Email</span></a></li>
                         <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> <span>Mobile Number</span></a></li>
-                        <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</a></li>
+                        <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -100,9 +105,8 @@
     </nav>
     
     <!-- Second Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark second-navbar" style=" background-color: #14202E;">
+    <nav class="navbar navbar-expand-lg navbar-dark second-navbar fixed-top" style="background-color: #14202E; height: 100px;">
         <div class="container-fluid">
-            <!-- Align dropdown button to the right -->
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -125,8 +129,11 @@
         </div>
     </nav>
 
-    <div class="container-fluid" style="margin-top: 50px;">
-        <!-- Content goes here -->
+    <!-- Banner -->
+    <div class="container-fluid" style="margin-top:200px;">
+        <div class="banner">
+            <img src="803.png" class="d-block w-100" alt="..." style="height:550px; width: 800px;">
+        </div>
     </div>
 </body>
 </html>
