@@ -15,11 +15,13 @@
             color: white;
         }
         .navbar {
-            height: 150px; 
+            height: 200px; /* Set the navbar height */
+            padding: 20px; /* Add padding for better spacing */
         }
         .navbar h1 {
             font-family: 'Cormorant Garamond', serif; /* Apply classic style font */
             color: #B68D40;
+            margin-bottom: 0;
         }
         .social-icons {
             list-style: none;
@@ -27,17 +29,36 @@
             margin: 0;
             display: flex;
             gap: 30px; /* Add space between list items */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
         }
         .social-icons li {
-            display: inline;
             color: #D6AD60; /* Set list item text color */
         }
         .social-icons a {
             color: #D6AD60; /* Set link color */
             text-decoration: none;
+            font-size: 1.1rem; /* Default font size */
         }
         .social-icons a:hover {
             text-decoration: underline;
+        }
+        /* Media query for screens less than 576px (bootstrap 'sm' breakpoint) */
+        @media (max-width: 575.98px) {
+            .navbar {
+                height: auto; /* Adjust height for mobile */
+                padding: 15px; /* Reduce padding for smaller screens */
+            }
+            .navbar .col-md-6 {
+                flex: 0 0 100%; /* Stack columns vertically */
+                max-width: 100%;
+                text-align: center; /* Center text for mobile */
+            }
+            .social-icons {
+                justify-content: center; /* Center the icons on mobile */
+            }
+            .social-icons a {
+                font-size: 0.9rem; /* Smaller font size for mobile */
+            }
         }
     </style>
 </head>
@@ -45,11 +66,11 @@
     <nav class="navbar fixed-top navbar-light" style="background-color:#4A171E;">
         <div class="container-fluid">
             <div class="row w-100">
-                <div class="col-md-6 d-flex align-items-center">
+                <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
                     <h1>JASMINE INTERIOR</h1>
                 </div>
                 <div class="col-md-6">
-                    <ul class="social-icons d-flex justify-content-end align-items-center">
+                    <ul class="social-icons d-flex justify-content-center justify-content-md-end align-items-center">
                         <li><a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                         <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> Email</a></li>
                         <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> Mobile Number</a></li>
