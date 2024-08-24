@@ -15,8 +15,14 @@
             color: white;
         }
         .navbar {
-            height: 200px; /* Set the navbar height */
-            padding: 20px; /* Add padding for better spacing */
+            padding: 10px; /* Add padding for better spacing */
+        }
+        .first-navbar {
+            height: 100px; /* Set the first navbar height */
+        }
+        .second-navbar {
+            margin-top: 100px; /* Adjust margin to make second navbar visible */
+            background-color: #1f2d3b; /* Background color for second navbar */
         }
         .navbar h1 {
             font-family: 'Cormorant Garamond', serif; /* Apply classic style font */
@@ -40,7 +46,15 @@
             font-size: 1.1rem; /* Default font size */
         }
         .social-icons a:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            color: aliceblue;
+        }
+        /* Styles for the second navbar */
+        .second-navbar .navbar-nav {
+            display: flex;
+            justify-content: space-around; /* Space items evenly */
+            width: 100%;
+           
         }
         /* Media query for screens less than 576px (bootstrap 'sm' breakpoint) */
         @media (max-width: 575.98px) {
@@ -66,7 +80,8 @@
     </style>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-light" style="background-color:#4A171E;">
+    <!-- First Navbar -->
+    <nav class="navbar fixed-top first-navbar navbar-light" style="background-color:#4A171E;">
         <div class="container-fluid">
             <div class="row w-100">
                 <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
@@ -77,13 +92,40 @@
                         <li><a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a></li>
                         <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> <span>Email</span></a></li>
                         <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> <span>Mobile Number</span></a></li>
-                        <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
+                        <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="container-fluid" style="margin-top: 220px;">
+    
+    <!-- Second Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark second-navbar" style=" background-color: #14202E;">
+        <div class="container-fluid">
+            <!-- Align dropdown button to the right -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-top: 50px;">
         <!-- Content goes here -->
     </div>
 </body>
