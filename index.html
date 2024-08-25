@@ -71,6 +71,28 @@
             background-size: cover; /* Cover the entire area */
             background-position: center; /* Center the image */
         }
+        .card-title, .card-text {
+            color: #1f2d3b;
+        }
+        .card {
+    width: 18rem; /* Fixed width for cards */
+    height:600px; /* Fixed height for cards */
+    display: flex; /* Flexbox for card to align items properly */
+    flex-direction: column; /* Column direction for vertical alignment */
+}
+
+.card-body {
+    flex: 1; /* Allows the card body to grow and fill the available space */
+    display: flex; /* Makes card body a flex container */
+    flex-direction: column; /* Aligns children in a column */
+    justify-content: space-between; /* Spaces content to keep button at the bottom */
+}
+
+.card-text {
+    overflow-y: auto; /* Allows vertical scrolling */
+    max-height:200px; /* Max height for text to ensure scroll */
+    flex-grow: 1
+}
         @media (max-width: 575.98px) {
             .navbar {
                 height: auto;
@@ -92,7 +114,7 @@
             }
             /* Additional styles for mobile dropdown background */
             .navbar-collapse {
-                background-color:#4A171E;
+                background-color: #4A171E;
                 width: 100vh; /* Same color as the body */
             }
             .navbar-nav .nav-item .nav-link {
@@ -154,41 +176,43 @@
         <div class="banner">
             <img src="803.png" class="d-block w-100" alt="..." style="height:500px; width: 800px;">
         </div>
-       </div>
-       <div class="container-fluid mt-5">
+    </div>
+
+    <!-- Products Section -->
+    <div class="container-fluid mt-5" id="product">
         <div class="row">
-            <center><h1 id="product">PRODUCTS</h1></center>
+            <center><h1>PRODUCTS</h1></center>
             <div class="col-md-4 p-5">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card">
+                    <img src="assets/velcrow.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Mosquito net velcrow type</h5>
+                      <p class="card-text">A mosquito net for windows with a Velcro attachment is a simple and effective solution to keep insects out while allowing fresh air in. This type of netting is easy to install and remove, making it ideal for any window in your home</p>
+                      <a href="#" class="btn btn-primary">VIEW MORE</a>
                     </div>
-                  </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+            <div class="col-md-4 p-5">
+                <div class="card">
+                    <img src="assets/magicscreen.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Magic screen mosquito net</h5>
+                      <p class="card-text">A magic screen mosquito net is a convenient and effective solution for keeping insects out while allowing fresh air in. This type of net features magnetic strips that automatically close behind you, making it easy to pass through without needing to use your hands.</p>
+                      <a href="#" class="btn btn-primary">VIEW MORE</a>
                     </div>
-                  </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
+            <div class="col-md-4 p-5">
+                <div class="card">
+                    <img src="assets/doorwin.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">Window Mosquito Net</h5>
+                      <p class="card-text">The openable window mosquito net is designed with a sturdy aluminum frame, providing a durable and long-lasting structure that can withstand frequent use. The frame is coated with a powder finish, ensuring it is resistant to rust, corrosion, and environmental wear, making it ideal for both indoor and outdoor applications. The net itself is made of high-quality stainless steel (SS) material, known for its strength and durability.</p>
+                      <a href="#" class="btn btn-primary">VIEW MORE</a>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
-       </div>
+    </div>
 </body>
 </html>
