@@ -101,6 +101,62 @@
             object-fit: cover;
             object-position: center;
         }
+        .price-section {
+    background-color: #e9f5f4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+}
+
+.price-section h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00796b; /* Teal color for the heading */
+}
+
+.price-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.price-details .old-price,
+.price-details .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.price-details .old-price p,
+.price-details .price p {
+    font-size: 0.875rem;
+    margin: 0;
+    color: #555;
+}
+
+.currency {
+    font-size: 1.25rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.price {
+    color: #c2185b; /* Offer price in a different color */
+    animation: highlight 1.5s ease-in-out infinite;
+}
+
+@keyframes highlight {
+    0% { color: #004d40; }
+    50% { color: #c2185b; }
+    100% { color: #004d40; }
+}
+
         .carousel-container {
             margin-top: 120px; /* Adjust this value as needed to create the gap below navbar */
         }
@@ -401,8 +457,14 @@
     <div class="price-section container">
         <h3>Special Offer</h3>
         <div class="price-details">
-            <div class="old-price">$45.00<p>per sqft</p></div>
-            <div class="price">$30.00<p>per sqft</p></div>
+            <div class="old-price">
+                <span class="currency">₹</span>45.00
+                <p>per sqft</p>
+            </div>
+            <div class="price">
+                <span class="currency">₹</span>30.00
+                <p>per sqft</p>
+            </div>
         </div>
     </div>
     
