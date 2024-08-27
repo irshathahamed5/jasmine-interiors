@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASMINE INTERIORS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #14202E;
+            color: white;
+        }
+        .navbar {
+            padding: 10px;
+        }
+        h5, h2, h3 {
+            color: #1f2d3b; /* Dark teal for headings */
+        }
+        .first-navbar {
+            height: 100px;
+        }
+        .second-navbar {
+            top: 80px; 
+            height: 100px;
+            background-color: #1f2d3b;
+        }
+        .navbar h1 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #B68D40;
+            margin-bottom: 0;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .social-icons li {
+            color: #D6AD60;
+        }
+        .social-icons a {
+            color: #D6AD60;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .social-icons a:hover {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .second-navbar .navbar-nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .second-navbar .navbar-nav .nav-item {
+            margin: 0 10px;
+        }
+        .second-navbar .navbar-nav .nav-item .nav-link {
+            color: #ffffff;
+        }
+        .second-navbar .navbar-nav .nav-item .nav-link:hover {
+            background-color: #1f2d3b;
+        }
+        .banner {
+            height: 500px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-title, .card-text {
+            color: #1f2d3b;
+        }
+        .card {
+            width: 18rem;
+            height: 620px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-text {
+            overflow-y: auto;
+            max-height: 200px;
+            flex-grow: 1;
+        }
+        .carousel-inner {
+            height: 500px;
+        }
+        .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .carousel-container {
+            margin-top: 120px; /* Adjust this value as needed to create the gap below navbar */
+        }
+        .main-container {
+            margin-top: 50px; /* Space from the top */
+            background-color: azure;
+            padding: 40px;
+            border-radius: 8px;
+        }
+        .photo-column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .photo-column img {
+            max-width: 100%;
+            border-radius: 8px; /* Rounded corners */
+        }
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .text-column p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .color-section {
+            margin-top: 40px;
+        }
+        .color-swatch {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .color-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            margin-right: 20px;
+            border: 2px solid #ddd; /* Light border for better visibility */
+        }
+        .color-box.black {
+            background-color: black;
+        }
+        .color-box.white {
+            background-color: white;
+            border: 2px solid #000; /* Dark border for white color */
+        }
+        .color-box.gray {
+            background-color: gray;
+        }
+        .color-box.ivory {
+            background-color: ivory;
+        }
+        .color-description p {
+            color: #1f2d3b; /* Dark teal for text */
+        }
+        .price-section {
+    background-color: #e9f5f4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure animations don't overflow */
+}
+
+.price-section h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00796b; /* Teal color for the heading */
+}
+
+.price-details {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.old-price, .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1; /* Ensure text appears above the animation */
+    animation: bounce 2s infinite, highlight 1.5s ease-in-out infinite;
+}
+
+.old-price {
+    color: #888; /* Gray color for old price */
+    text-decoration: line-through;
+}
+
+.price {
+    color: #c2185b; /* Offer price color */
+}
+
+.price p, .old-price p {
+    font-size: 1rem;
+    margin: 0;
+    color: #555; /* Gray color for 'per sqft' */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes highlight {
+    0% { color: #004d40; }
+    50% { color: #c2185b; }
+    100% { color: #004d40; }
+}
+
+        .price-section {
+            background-color: #e9f5f4;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .price-section h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #00796b; /* Teal color for the heading */
+        }
+        .price-details {
+            margin-top: 20px;
+        }
+        .price, .old-price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #c2185b; /* Offer price color */
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #888; /* Gray color for old price */
+        }
+        .price {
+            animation: highlight 1.5s ease-in-out infinite;
+        }
+        .price-section {
+    background-color: #e9f5f4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure animations don't overflow */
+}
+
+.price-section h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00796b; /* Teal color for the heading */
+}
+
+.price-details {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.old-price, .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+    position: relative;
+    z-index: 1; /* Ensure text appears above the animation */
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888; /* Gray color for old price */
+}
+
+.price {
+    color: #c2185b; /* Offer price color */
+    animation: pulse 2s infinite, highlight 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes highlight {
+    0% { color: #004d40; }
+    50% { color: #c2185b; }
+    100% { color: #004d40; }
+}
+
+        @keyframes highlight {
+            0% { color: #004d40; }
+            50% { color: #c2185b; }
+            100% { color: #004d40; }
+        }
+        @media (max-width: 575.98px) {
+            .navbar {
+                height: auto;
+                padding: 15px;
+            }
+            .navbar .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+            .social-icons a {
+                font-size: 1.2rem;
+            }
+            .social-icons a span {
+                display: none;
+            }
+            .navbar-collapse {
+                background-color: #4A171E;
+                width: 100vh;
+            }
+            .navbar-nav .nav-item .nav-link {
+                color: #ffffff;
+            }
+            .navbar-nav .nav-item .nav-link:hover {
+                background-color: #1f2d3b;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar fixed-top first-navbar navbar-light" style="background-color:#4A171E;">
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <h1>JASMINE INTERIOR</h1>
+                </div>
+                <div class="col-md-6">
+                    <ul class="social-icons d-flex justify-content-center justify-content-md-end align-items-center">
+                        <li><a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i> <span>WhatsApp</span></a></li>
+                        <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> <span>Email</span></a></li>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> <span>Mobile Number</span></a></li>
+                        <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> <span>Instagram</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container carousel-container">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="assets/v2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="assets/v1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/v3.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="price-section container">
+        <h3>Special Offer</h3>
+        <div class="price-details">
+            <div class="old-price">$45.00<p>per sqft</p></div>
+            <div class="price">$30.00<p>per sqft</p></div>
+        </div>
+    </div>
+    
+    <div class="container main-container">
+        <div class="row justify-content-center">
+            <div class="col-md-5 photo-column">
+                <img src="assets/v1.jpg" alt="Fiberglass Mosquito Net Photo">
+            </div>
+            <div class="col-md-5 text-column">
+                <h2>Fiberglass Mosquito Net</h2>
+                <p>
+                    These fiberglass mosquito nets are widely used as attachable and detachable mosquito mesh, offering an economical, durable, rust-free, and easy-to-wash solution. The Velcro-type tape is a major component in this setup. The fiberglass mesh is cut to the required window or ventilator measurements. The loop of the tape is securely sewn to the four sides of the mesh, while the hook side of the Velcro tape is stapled to the outer wooden frame of the required windows or ventilators.
+                </p>
+                <p>
+                    For aluminum or UPVC windows or ventilators, a sticker-type hook (more expensive than the normal type) is applied using durable SR glue on the outer frame. This ensures robust protection against mosquitoes, flies, and other tiny insects. Our mosquito nets come in three quality meshes: SK Nets, Saint-Gobain, and Phifer, tailored to the Chennai environment.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 photo-column">
+                <img src="assets/v3.jpg" alt="Available Colors">
+            </div>
+            <div class="col-md-5 text-column">
+                <h3>Available Colors</h3>
+                <div class="color-swatch">
+                    <div class="color-box black"></div>
+                    <div class="color-description">
+                        <h5>Black</h5>
+                        <p>The black fiberglass mosquito net offers a sleek and modern look that blends well with any window frame color and interior design.</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box gray" style="background-color: gray;"></div>
+                    <div class="color-description">
+                        <h5>Gray</h5>
+                        <p>The gray fiberglass mosquito net provides a neutral and subtle appearance, perfect for those who prefer a softer, less contrasting option that still offers excellent visibility.</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box ivory" style="background-color: ivory;"></div>
+                    <div class="color-description">
+                        <h5>Ivory</h5>
+                        <p>Ivory adds a touch of elegance and brightness to any space, ideal for homes that favor lighter, more airy color schemes while still keeping out unwanted pests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-container">
+        <div class="row justify-content-center">
+            <div class="col-md-5 photo-column">
+                <img src="assets/v4.jpeg" alt="Velcro Hook Photo">
+            </div>
+            <div class="col-md-5 text-column">
+                <h2>Velcro Hook Details</h2>
+                <p>
+                    The Velcro hook component used in our fiberglass mosquito nets is designed for easy attachment and detachment. It is durable, rust-free, and ensures a secure fit on various window and ventilator frames. The hook side of the Velcro tape is stapled to the outer wooden frame or applied using SR glue for aluminum or UPVC frames.
+                </p>
+                <p>
+                    This versatile hook mechanism provides a reliable barrier against mosquitoes, flies, and other tiny insects while allowing for easy maintenance and cleaning of the mosquito nets. Available in both standard and sticker-type variants.
+                </p>
+            </div>
+        </div>
+        <div class="row color-section">
+            <div class="col-12">
+                <h3>Available Colors</h3>
+                <div class="color-swatch">
+                    <div class="color-box black"></div>
+                    <div class="color-description">
+                        <h5>Black</h5>
+                        <p>The black Velcro hook provides a sleek and modern look, ideal for a sophisticated and discreet appearance.</p>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-box white"></div>
+                    <div class="color-description">
+                        <h5>White</h5>
+                        <p>The white Velcro hook blends seamlessly with light-colored frames and offers a clean and elegant appearance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
