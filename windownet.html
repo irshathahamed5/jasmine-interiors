@@ -412,6 +412,41 @@
             }
         }
     </style>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .photo-column {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            overflow: hidden;
+        }
+        .frame-display {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 1s ease-in-out;
+        }
+      
+        .color-box {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            margin: 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 4px;
+        }
+        .color-box:hover {
+            border-color: #000;
+        }
+        .white { background-color: #ffffff; }
+        .brown { background-color: #8B4513; }
+        .black { background-color: #000000; }
+        .honeygold { background-color: #FFD700; }
+    </style>
 </head>
 <body>
     <nav class="navbar fixed-top first-navbar navbar-light" style="background-color:#4A171E;">
@@ -431,88 +466,76 @@
             </div>
         </div>
     </nav>
-    <div class="container carousel-container">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="assets/v1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="assets/v3.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000" >
-                    <img src="assets/v3.jpg" class="d-block w-100" alt="...">
+    <div class="container carousel-container" style="margin-top: 200px;">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <div class="image-wrapper" style="width: 100%; height: 500px; overflow: hidden;">
+                    <img src="assets/wd.jpg" class="img-fluid" alt="Image 1" onclick="openModal('assets/wd.jpg')" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="col-12 col-md-4 mb-4 mb-md-0">
+                <div class="image-wrapper" style="width: 100%; height: 500px; overflow: hidden;">
+                    <img src="assets/wd3.jpg" class="img-fluid" alt="Image 2" onclick="openModal('assets/wd3.jpg')" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="image-wrapper" style="width: 100%; height: 500px; overflow: hidden;">
+                    <img src="assets/wd5.jpg" class="img-fluid" alt="Image 3" onclick="openModal('assets/wd5.jpg')" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
         </div>
+    </div>
     </div>
     <div class="price-section container">
         <h3>Special Offer</h3>
         <div class="price-details">
             <div class="old-price">
-                <span class="currency">₹</span>45.00
+                <span class="currency">₹</span>180
                 <p>per sqft</p>
             </div>
             <div class="price">
-                <span class="currency">₹</span>30.00
+                <span class="currency">₹</span>160
                 <p>per sqft</p>
             </div>
         </div>
     </div>
-    
     <div class="container main-container">
         <div class="row justify-content-center">
             <div class="col-md-5 photo-column">
-                <img src="assets/v1.jpg" alt="Fiberglass Mosquito Net Photo">
+                <img id="frameDisplay2" class="imgs" src="assets/wf6.jpg" alt="Selected Aluminum Frame" class="frame-display">
             </div>
             <div class="col-md-5 text-column">
-                <h2>Fiberglass Mosquito Net</h2>
+                <h2>Aluminium Frame</h2>
                 <p>
-                    These fiberglass mosquito nets are widely used as attachable and detachable mosquito mesh, offering an economical, durable, rust-free, and easy-to-wash solution. The Velcro-type tape is a major component in this setup. The fiberglass mesh is cut to the required window or ventilator measurements. The loop of the tape is securely sewn to the four sides of the mesh, while the hook side of the Velcro tape is stapled to the outer wooden frame of the required windows or ventilators.
+                    Our aluminum frames for mosquito nets are available in five distinct colors: brown, black, white, ivory, and honey gold. Each frame features a sleek size of 0.75 inches, combining both durability and a modern aesthetic to seamlessly fit into your home decor.
                 </p>
-                <p>
-                    For aluminum or UPVC windows or ventilators, a sticker-type hook (more expensive than the normal type) is applied using durable SR glue on the outer frame. This ensures robust protection against mosquitoes, flies, and other tiny insects. Our mosquito nets come in three quality meshes: SK Nets, Saint-Gobain, and Phifer, tailored to the Chennai environment.
-                </p>
+                <div>
+                    <p>Select a color:</p>
+                    <div class="color-box white" onclick="changeFrame('white')"></div>
+                    <div class="color-box brown" onclick="changeFrame('brown')"></div>
+                    <div class="color-box black" onclick="changeFrame('black')"></div>
+                    <div class="color-box honeygold" onclick="changeFrame('honeygold')"></div>
+                </div>
             </div>
         </div>
     </div>
 
+
+
     <div class="container main-container mb-5">
         <div class="row justify-content-center">
             <div class="col-md-5 photo-column">
-                <img src="assets/v3.jpg" alt="Available Colors">
+                <img src="assets/wf1.jpg" alt="Available Colors">
             </div>
             <div class="col-md-5 text-column">
-                <h3>Available Colors</h3>
+                <h3>Hinges</h3>
                 <div class="color-swatch">
-                    <div class="color-box black"></div>
                     <div class="color-description">
-                        <h5>Black</h5>
-                        <p>The black fiberglass mosquito net offers a sleek and modern look that blends well with any window frame color and interior design.</p>
+                     
+                        <p>Our mosquito net frames are equipped with high-quality plastic hinges that are both stylish and durable. Designed to match the frame color seamlessly, these plastic hinges provide a cohesive and polished look while ensuring strong, reliable performance. The plastic material offers excellent resistance to rust and corrosion, making it ideal for various environmental conditions. These hinges allow for smooth operation and easy access, enhancing the functionality of your mosquito net system. With their robust construction and elegant appearance, our plastic-hinged frames offer a practical solution for maintaining a pest-free environment while complementing the aesthetic of your windows and doors.</p>
                     </div>
                 </div>
-                <div class="color-swatch">
-                    <div class="color-box gray" style="background-color: gray;"></div>
-                    <div class="color-description">
-                        <h5>Gray</h5>
-                        <p>The gray fiberglass mosquito net provides a neutral and subtle appearance, perfect for those who prefer a softer, less contrasting option that still offers excellent visibility.</p>
-                    </div>
-                </div>
-                <div class="color-swatch">
-                    <div class="color-box ivory" style="background-color: ivory;"></div>
-                    <div class="color-description">
-                        <h5>Ivory</h5>
-                        <p>Ivory adds a touch of elegance and brightness to any space, ideal for homes that favor lighter, more airy color schemes while still keeping out unwanted pests.</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -552,5 +575,17 @@
             </div>
         </div>
     </div>
+   
+    <script>
+        function openModal(imageSrc) {
+            // Set the source of the modal image
+            document.getElementById('modalImage').src = imageSrc;
+            
+            // Show the modal
+            var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            myModal.show();
+        }
+    </script>
+    
 </body>
 </html>
