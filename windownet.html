@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/2.png">
     <style>
         body {
             background-color: #14202E;
@@ -414,6 +415,7 @@
     </style>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
+        
         .photo-column {
             position: relative;
             width: 100%;
@@ -467,22 +469,41 @@
         </div>
     </nav>
     <div class="container carousel-container" style="margin-top: 200px;">
-        <div class="row">
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <div class="image-wrapper" style="width: 100%; height: 500px; overflow: hidden;">
-                    <img src="assets/wd.jpg" class="img-fluid" alt="Image 1" onclick="openModal('assets/wd.jpg')" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
+        <div class="container my-5">
+            <!-- Row of images -->
+            <div class="row">
+              <div class="col-md-2">
+                <img src="assets/wd3.jpg" alt="Image 1"  class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
+              </div>
+              <div class="col-md-2">
+                <img src="assets/wd5.jpg" alt="Image 2" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
+              </div>
+              <div class="col-md-2">
+                <img src="assets/wd.jpg" alt="Image 3" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
+              </div>
+              <div class="col-md-2">
+                <img src="assets/wd55.jpeg" alt="Image 3" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
+              </div>
+              <div class="col-md-2">
+                <img src="assets/wd.jpg" alt="Image 3" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
+              </div>
+              <!-- Add more images as needed -->
             </div>
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <div class="image-wrapper" style="width: 100%; height: 500px; overflow: hidden;">
-                    <img src="assets/wd3.jpg" class="img-fluid" alt="Image 2" onclick="openModal('assets/wd3.jpg')" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <img src="" id="modalImage" class="img-fluid" alt="Selected Image">
                 </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="image-wrapper" style="width: 100%; height: 500px; overflow: hidden;">
-                    <img src="assets/wd5.jpg" class="img-fluid" alt="Image 3" onclick="openModal('assets/wd5.jpg')" style="width: 100%; height: 100%; object-fit: cover;">
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
     </div>
     </div>
@@ -502,7 +523,7 @@
     <div class="container main-container">
         <div class="row justify-content-center">
             <div class="col-md-5 photo-column">
-                <img id="frameDisplay2" class="imgs" src="assets/wf6.jpg" alt="Selected Aluminum Frame" class="frame-display">
+                <img id="frameDisplay2" class="imgs" src="assets/wf6.jpg" alt="Selected Aluminum Frame"  class="frame-display">
             </div>
             <div class="col-md-5 text-column">
                 <h2>Aluminium Frame</h2>
@@ -557,6 +578,7 @@
             </div>
         </div>
     </div>
+    </div>
 
     <div class="container main-container mb-5">
         <div class="row justify-content-center">
@@ -575,17 +597,51 @@
             </div>
         </div>
     </div>
-   
+    </div>
+    <div class="container main-container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 photo-column">
+                <img src="assets/nblack.jpg" alt="Available Colors">
+            </div>
+            <div class="col-md-5 text-column">
+                <h3></h3>
+                <div class="color-swatch">
+                    <div class="color-description">
+                     
+                        <p>A stainless steel mosquito net with a black powder-coated finish made from 304-grade stainless steel is an ideal solution for homes and commercial spaces. This net offers exceptional durability and corrosion resistance, thanks to the high-quality stainless steel material. The black powder coating enhances both the appearance and longevity of the net, providing additional protection against rust and weathering. The fine mesh effectively keeps mosquitoes and other small insects out, while allowing fresh air and light to pass through. With its sleek, modern look, this mosquito net complements a wide variety of window and door frames, blending functionality with aesthetics for long-term protection and convenience.</p>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container main-container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 photo-column">
+                <img src="assets/nwhite.jpg" alt="Available Colors">
+            </div>
+            <div class="col-md-5 text-column">
+                <h3></h3>
+                <div class="color-swatch">
+                    <div class="color-description">
+                     
+                        <p>A stainless steel mosquito net in white, without any powder coating, is an excellent option for homes and offices. Made from 304-grade stainless steel, this net ensures long-lasting durability and resistance to rust and corrosion, even without the additional layer of powder coating. The white finish gives it a clean, subtle appearance, making it an ideal choice for bright, modern interiors. Its fine mesh design efficiently blocks mosquitoes and other insects, allowing for good airflow and natural light. This versatile and functional net blends well with a variety of window and door frames, offering reliable protection and a seamless look.</p>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
     <script>
-        function openModal(imageSrc) {
-            // Set the source of the modal image
-            document.getElementById('modalImage').src = imageSrc;
-            
-            // Show the modal
-            var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
-            myModal.show();
-        }
-    </script>
+        document.querySelectorAll('.image-preview').forEach(image => {
+          image.addEventListener('click', function() {
+            const src = this.src;
+            document.getElementById('modalImage').src = src;
+          });
+        });
+      </script>
     
 </body>
 </html>
