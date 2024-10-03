@@ -186,18 +186,28 @@
 @media (max-width: 575.98px) {
     .service-section {
         text-align: center; /* Center align content for mobile */
+        margin: 0 15px; /* Add margin around the service section for mobile */
     }
     
     /* Stack icon and text in column direction */
     .service-section .row {
         flex-direction: column;
     }
-    
+
     /* Full width for the text column and image */
     .service-section .text-column, 
     .service-section .photo-column {
         width: 100%;
         margin-bottom: 20px; /* Space between elements */
+    }
+
+    /* Add margins to the text and image columns */
+    .service-section .text-column {
+        margin: 0 15px;
+    }
+
+    .service-section .photo-column {
+        margin: 0 15px;
     }
 
     /* Adjust heading and text font sizes for smaller screens */
