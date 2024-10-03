@@ -449,6 +449,55 @@
         .black { background-color: #000000; }
         .honeygold { background-color: #FFD700; }
     </style>
+     <style>
+        /* Footer Styling */
+footer {
+    background-color: #1f2d3b;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: #D6AD60;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #D6AD60;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* Footer Responsive Adjustments */
+@media (max-width: 575.98px) {
+    footer {
+        text-align: center;
+    }
+    footer ul {
+        padding: 0;
+    }
+    footer ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+}
+
+    </style>
 </head>
 <body>
     <nav class="navbar fixed-top first-navbar navbar-light" style="background-color:#4A171E;">
@@ -642,6 +691,26 @@
           });
         });
       </script>
-    
+          <!-- Footer -->
+          <footer class="container-fluid mt-5" id="contact">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1234567890</a></li>
+                        <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> your-email@example.com</a></li>
+                        <li><a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Us</h5>
+                    <ul>
+                        <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://facebook.com/your-profile" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
 </body>
 </html>

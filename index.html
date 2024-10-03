@@ -22,6 +22,163 @@
         }
         .second-navbar {
             top:80px; 
+            height: 100px;
+            background-color: #1f2d3b;
+        }
+        .navbar h1 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #B68D40;
+            margin-bottom: 0;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .social-icons li {
+            color: #D6AD60;
+        }
+        .social-icons a {
+            color: #D6AD60;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .social-icons a:hover {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .second-navbar .navbar-nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .second-navbar .navbar-nav .nav-item {
+            margin: 0 10px;
+        }
+        .second-navbar .navbar-nav .nav-item .nav-link {
+            color: #ffffff;
+        }
+        .second-navbar .navbar-nav .nav-item .nav-link:hover {
+            background-color: #1f2d3b;
+        }
+        .banner {
+            height: 500px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .card-title, .card-text {
+            color: #1f2d3b;
+        }
+        .card {
+            width: 18rem;
+            height: 620px;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-text {
+            overflow-y: auto;
+            max-height: 200px;
+            flex-grow: 1;
+        }
+        @media (max-width: 575.98px) {
+            .navbar {
+                height: auto;
+                padding: 15px;
+            }
+            .navbar .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+            .social-icons a {
+                font-size: 1.2rem;
+            }
+            .social-icons a span {
+                display: none;
+            }
+            .navbar-collapse {
+                background-color: #4A171E;
+                width: 100vh;
+            }
+            .navbar-nav .nav-item .nav-link {
+                color: #ffffff;
+            }
+            .navbar-nav .nav-item .nav-link:hover {
+                background-color: #1f2d3b;
+            }
+        }
+
+        /* Service Section Styling */
+        .service-section {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+            color: #000;
+        }
+        .service-icon {
+            font-size: 50px;
+            color: #007bff;
+        }
+        .service-description h3 {
+            font-size: 1.8rem;
+            color: #1f2d3b;
+        }
+        .service-description p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1f2d3b;
+            color: #fff;
+            padding: 40px 0;
+        }
+        footer h5 {
+            color: #D6AD60;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        footer ul li {
+            margin-bottom: 10px;
+        }
+        footer ul li a {
+            color: #D6AD60;
+            text-decoration: none;
+        }
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+   <style>
+        
+        body {
+            background-color: #14202E;
+            color: white;
+        }
+        .navbar {
+            padding: 10px;
+        }
+        .first-navbar {
+            height: 100px;
+        }
+        .second-navbar {
+            top:80px; 
             height: 100px; /* Adjust position below the first navbar */
             background-color: #1f2d3b;
         }
@@ -161,7 +318,7 @@
                         <a class="nav-link" href="#product"><i class="fas fa-box"></i> Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-cogs"></i> Services</a>
+                        <a class="nav-link" href="#services"><i class="fas fa-cogs"></i> Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
@@ -246,8 +403,45 @@
             </div>
         </div>
     </div>
+ 
+         <!-- Service Section -->
+        <div class="container service-section" id="services">
+            <div class="row align-items-center">
+                <!-- Icon on the Left -->
+                <div class="col-md-2 text-center">
+                    <i class="fas fa-tools service-icon"></i>
+                </div>
+                <!-- Description on the Right -->
+                <div class="col-md-10">
+                    <div class="service-description">
+                        <h3>24/7 Customer Support</h3>
+                        <p>We offer round-the-clock support for all our customers. Whether you need help with installations, product inquiries, or post-sale services, our team is always available to assist you with the best solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+            <!-- Footer -->
+            <footer class="container-fluid mt-5" id="contact">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>Contact Us</h5>
+                        <ul>
+                            <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +1234567890</a></li>
+                            <li><a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i> your-email@example.com</a></li>
+                            <li><a href="https://wa.me/your-number" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <h5>Follow Us</h5>
+                        <ul>
+                            <li><a href="https://instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://facebook.com/your-profile" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
 
-
-  
+    
 </body>
 </html>
