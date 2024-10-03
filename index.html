@@ -166,7 +166,56 @@
     </style>
 
    <style>
-        
+        /* Base Service Section Styling */
+.service-section {
+    padding: 40px 0;
+}
+
+.service-section h3 {
+    color: #B68D40;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.service-section p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 575.98px) {
+    .service-section {
+        text-align: center; /* Center align content for mobile */
+    }
+    
+    /* Stack icon and text in column direction */
+    .service-section .row {
+        flex-direction: column;
+    }
+    
+    /* Full width for the text column and image */
+    .service-section .text-column, 
+    .service-section .photo-column {
+        width: 100%;
+        margin-bottom: 20px; /* Space between elements */
+    }
+
+    /* Adjust heading and text font sizes for smaller screens */
+    .service-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-section p {
+        font-size: 1rem;
+    }
+
+    /* Image styling for mobile */
+    .service-section img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
         body {
             background-color: #14202E;
             color: white;
