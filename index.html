@@ -180,7 +180,53 @@
                 background-color: #1f2d3b;
             }
         }
+        .custom-container {
+            background-color: #4A171E; /* Light grey background */
+      padding: 20px;
+      border-radius: 8px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      
+    }  .custom-container {
+        background-color: #4A171E; /* Dark background color */
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    /* Product list styling */
+    ul.product-list {
+      display: flex;
+      justify-content: space-around; /* Space around each list item */
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none; /* Remove bullet points */
+    }
+
+    /* List items */
+    ul.product-list li {
+      flex-grow: 1;
+      text-align: center; /* Center the text in the list item */
+    }
+
+    /* Links inside the list items */
+    ul.product-list li a {
+        list-style: none;
+      display: block;
+      padding: 10px;
+      color: #B68D40;
+    /*  background-color: #fff;*/
+      text-align: center;
+      text-decoration: none;
+   /*   border: 1px solid #ddd; */
+      border-radius: 5px;
+    }
+    
         /* Service Section Styling */
         .service-section {
             padding: 40px 0;
@@ -394,11 +440,30 @@
             <img src="803.png" class="d-block w-100" alt="..." style="height:500px; width: 800px;">
         </div>
     </div>
-
+    <div class="container mt-5">
+        <!-- Product List with centered items and space around, no bullets -->
+        <div class="col-12 mb-3 custom-container">
+          <ul class="product-list">
+            <li>
+              <a href="#mosquito">Mosquito Net</a>
+            </li>
+            <li>
+              <a href="#">Product 2</a>
+            </li>
+            <li>
+              <a href="#">Product 3</a>
+            </li>
+            <li>
+              <a href="#">Product 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
     <!-- Products Section  one-->
-    <div class="container-fluid mt-5" id="product">
+    <div class="container-fluid mt-5" id="mosquito">
         <div class="row">
-            <center><h1>PRODUCTS</h1></center>
+            <center><h1>Mosquito Net</h1></center>
             <div class="col-md-4 p-5">
                 <div class="card">
                     <img src="assets/velcrow.png" class="card-img-top" alt="...">
