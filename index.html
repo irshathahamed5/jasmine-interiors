@@ -149,7 +149,40 @@
             overflow-y: auto;
             max-height: 200px;
             flex-grow: 1;
-        }
+        }.custom-container {
+    display: flex;
+    justify-content: space-around; /* Distributes items with space between them */
+    flex-wrap: wrap; /* Ensures items will wrap to the next line on smaller screens */
+}
+
+.product-list {
+    list-style-type: none; /* Removes bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Adds space between list items */
+    flex-wrap: wrap;
+}
+
+.product-list li {
+    margin: 5px 10px; /* Add some margin to space out items */
+}
+
+.product-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 576px) {
+    .custom-container {
+        justify-content: center; /* Center items in mobile view */
+    }
+    .product-list li {
+        flex: 0 1 100%; /* Ensures each item takes full width on small screens */
+        text-align: center;
+    }
+}
+
         @media (max-width: 575.98px) {
             .navbar {
                 height: auto;
