@@ -171,7 +171,36 @@
     justify-content: space-around; /* Distributes items with space between them */
     flex-wrap: wrap; /* Ensures items will wrap to the next line on smaller screens */
 }
-
+@media (max-width: 575.98px) {
+            .navbar {
+                height: auto;
+                padding: 15px;
+            }
+            .navbar .col-md-6 {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+            .social-icons {
+                justify-content: center;
+            }
+            .social-icons a {
+                font-size: 1.2rem;
+            }
+            .social-icons a span {
+                display: none;
+            }
+            .navbar-collapse {
+                background-color: #4A171E;
+                width: 100vh;
+            }
+            .navbar-nav .nav-item .nav-link {
+                color: #ffffff;
+            }
+            .navbar-nav .nav-item .nav-link:hover {
+                background-color: #1f2d3b;
+            }
+        }
 .product-list {
     list-style-type: none; /* Removes bullets */
     padding: 0;
