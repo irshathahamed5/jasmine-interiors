@@ -19,8 +19,118 @@
             display: block;
             margin: 0 auto; /* Center the image */
         }
+
+        /* General styling */
+        html, body {
+            height: 100%;
+            margin: 0;
+            background-color: #14202E;
+            color: white;
+        }
+
+        .navbar {
+            padding: 10px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .price-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .price-details {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 20px;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #ff0000;
+        }
+
+        .offer-price {
+            color: #28a745;
+            font-size: 32px;
+            font-weight: bold;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .currency {
+            font-size: 20px;
+            vertical-align: super;
+        }
+
+        .description {
+            text-align: center;
+            margin: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            font-size: 14px;
+            background-color: #1f2d3b;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        footer h5 {
+            color: #D6AD60;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            color: #D6AD60;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+            .description {
+                font-size: 16px;
+            }
+        }
     </style>
-    <style>
+      <style>
         /* Ensure the body takes full height */
         html, body {
             height: 100%;
@@ -259,12 +369,27 @@
         </nav>
     </header>
 
-    <!-- Main Content (ensures footer stays at the bottom) -->
+    <!-- Main Content -->
     <div class="content mt-5">
         <!-- Centered Image -->
         <div class="container">
             <div class="centered-image">
-                <img src="assets/pleated-screen-door.jpg"  height="700px" alt="Wallpaper Image">
+                <img src="assets/pleated-screen-door.jpg" height="700px" alt="Wallpaper Image">
+            </div>
+
+            <!-- Price Section with Animation -->
+            <div class="price-section container">
+                <h3>Special Offer</h3>
+                <div class="price-details">
+                    <div class="old-price">
+                        <span class="currency">₹</span>350
+                        <p>per sqft</p>
+                    </div>
+                    <div class="offer-price">
+                        <span class="currency">₹</span>320
+                        <p>per sqft</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Description Paragraph -->
@@ -273,12 +398,10 @@
 
                 Available in five elegant colors, the net can seamlessly blend with your existing décor, adding an extra touch of sophistication. Whether you prefer a subtle or bold look, these color options ensure that you’ll find the perfect match for your space. What’s more, at just ₹320 per square foot, this sliding mosquito net comes at an unbeatable offer price, delivering excellent value without compromising on quality. Durable, rust-resistant, and easy to maintain, it provides a long-lasting solution for your home’s protection while enhancing the aesthetic appeal of your windows and doors.
             </p>
-           
-            
         </div>
     </div>
 
-    <!-- Sticky Footer -->
+    <!-- Footer -->
     <footer class="container-fluid mt-5" id="contact">
         <div class="row">
             <div class="col-md-6">
