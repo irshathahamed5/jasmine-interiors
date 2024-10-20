@@ -499,6 +499,24 @@ footer ul li a:hover {
 }
 
     </style>
+         <style>
+            /* Set fixed size for the carousel images */
+            .carousel-inner {
+                max-width: 800px;
+                /* Set the desired width */
+                max-height: 400px;
+                /* Set the desired height */
+                margin: auto;
+                /* Center the slider */
+            }
+    
+            .carousel-inner img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* Ensures the image covers the entire area without distortion */
+            }
+        </style>
 </head>
 <body>
     <nav class="navbar fixed-top first-navbar navbar-light" style="background-color:#4A171E;">
@@ -519,27 +537,24 @@ footer ul li a:hover {
         </div>
     </nav>
     <div class="container carousel-container" style="margin-top: 200px;">
-        <div class="container my-5">
-            <!-- Row of images -->
-            <div class="row">
-              <div class="col-md-2">
-                <img src="assets/wd3.jpg" alt="Image 1"  class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
-              </div>
-              <div class="col-md-2">
-                <img src="assets/wd5.jpg" alt="Image 2" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
-              </div>
-              <div class="col-md-2">
-                <img src="assets/wd.jpg" alt="Image 3" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
-              </div>
-              <div class="col-md-2">
-                <img src="assets/wd55.jpeg" alt="Image 3" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
-              </div>
-              <div class="col-md-2">
-                <img src="assets/wd.jpg" alt="Image 3" class="img-thumbnail image-preview" data-bs-toggle="modal" data-bs-target="#imageModal" style="cursor: pointer;">
-              </div>
-              <!-- Add more images as needed -->
-            </div>
-          </div>
+        <div id="imageSlider" class="carousel slide container" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- 3 seconds interval -->
+            <div class="carousel-inner">
+                <div class="carousel-item active"> <img src="assets/magwin-transformed (1).jpeg" d-block w-100"
+                        alt="zeebra blinds Image 1"> </div>
+                <div class="carousel-item"> <img src="assets/mg2_enhanced.jpg" class="d-block w-100"
+                        alt="zeebra blinds Image 2"> </div>
+                <!-- <div class="carousel-item"> <img src="assets/maindoor-transformed (1)_enhanced.jpeg" class="d-block w-100"
+                        alt="zeebra blinds Image 3"> </div> -->
+                <!-- <div class="carousel-item"> <img src="z4 (1)_enhanced.jpg" class="d-block w-100"
+                        alt="zeebra blinds Image 3"> </div> -->
+            </div> <!-- Manual controls --> <button class="carousel-control-prev" type="button"
+                data-bs-target="#imageSlider" data-bs-slide="prev"> <span class="carousel-control-prev-icon"
+                    aria-hidden="true"></span> <span class="visually-hidden">Previous</span> </button> <button
+                class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next"> <span
+                    class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                    class="visually-hidden">Next</span> </button>
+        </div>
           
           <!-- Modal -->
           <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
