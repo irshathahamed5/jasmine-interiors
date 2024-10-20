@@ -153,6 +153,56 @@
             text-decoration: line-through;
             color: #888;
         }
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+/* Mobile-specific styles */
+@media (min-width: 768px) {
+    .image-gallery {
+        display: none; /* Hide gallery on larger screens */
+    }
+}
 
         .price {
             color: #c2185b;
@@ -439,7 +489,21 @@
                 <div class="price"> <span class="currency">Starting from ₹</span>250 <p>per sqft</p>
                 </div>
             </div>
-        </div> <!-- Description Paragraph -->
+        </div>
+        <div class="image-gallery">
+            <img src="w01 (1)_enhanced.jpg" alt="Image 3" class="thumbnail" onclick="showImage(this)">
+            <img src="w02 (1)_enhanced.jpg" alt="Image 1" class="thumbnail" onclick="showImage(this)">
+            <img src="w03 (1)_enhanced.jpg" alt="Image 2" class="thumbnail" onclick="showImage(this)">
+            <img src="w04 (1)_enhanced.jpg" alt="Image 3" class="thumbnail" onclick="showImage(this)">
+            <img src="w05 (1)_enhanced.jpg" alt="Image 3" class="thumbnail" onclick="showImage(this)">
+            <img src="w06 (1)_enhanced.jpg" alt="Image 3" class="thumbnail" onclick="showImage(this)">
+        </div>
+    
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-image">
+        </div> 
+        <!-- Description Paragraph -->
         <p class="description"> Wooden blinds are a timeless and elegant window treatment option that adds warmth and sophistication to any space. Made from natural wood or high-quality faux wood, these blinds offer both functionality and aesthetic appeal. Their sturdy slats can be easily adjusted to control the amount of light entering a room, while also providing privacy when needed. Wooden blinds are ideal for creating a cozy, natural atmosphere and are particularly well-suited to living rooms, bedrooms, and home offices. The natural grain and texture of real wood bring a touch of organic beauty to your interiors, making them a popular choice for those who appreciate classic or rustic design styles.
 
             Starting at an affordable price of ₹250 per square foot, wooden blinds offer great value for homeowners seeking a blend of quality and style. They come in a wide range of finishes, from light oak and natural pine to rich mahogany and dark walnut, allowing you to choose the perfect shade to complement your décor. Whether you prefer a light, airy feel or a more dramatic, bold look, there are options to suit your taste. Faux wood blinds, which mimic the look of real wood but are more resistant to moisture, are also available at similar price points, making them a great option for areas like kitchens and bathrooms where humidity is a concern.
@@ -472,6 +536,18 @@
             </div>
         </div>
     </footer>
+    <script>function showImage(element) {
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        modal.style.display = "flex";
+        modalImage.src = element.src; // Set the source of the modal image to the clicked thumbnail
+    }
+    
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+    </script>
 </body>
 
 </html>
