@@ -229,7 +229,57 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; /* Ensure animations don't overflow */
+}body {
+    font-family: Arial, sans-serif;
 }
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+/* Mobile-specific styles */
+@media (min-width: 768px) {
+    .image-gallery {
+        display: none; /* Hide gallery on larger screens */
+    }
+}
+
 
 .price-section h3 {
     margin: 0;
@@ -492,7 +542,7 @@ footer ul li a:hover {
                     <img src="assets/v3.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item" data-bs-interval="3000" >
-                    <img src="assets/v3.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/velcrow_enhanced.jpeg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -518,7 +568,16 @@ footer ul li a:hover {
             </div>
         </div>
     </div>
-    
+    <div class="image-gallery">
+        <img src="assets/velcrow_enhanced.jpeg" alt="Image 1" class="thumbnail" onclick="showImage(this)">
+        <img src="assets/wf2.jpg" alt="Image 2" class="thumbnail" onclick="showImage(this)">
+        <img src="assets/wf3.jpg" alt="Image 3" class="thumbnail" onclick="showImage(this)">
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
     <div class="container main-container">
         <div class="row justify-content-center">
             <div class="col-md-5 photo-column">
@@ -623,6 +682,18 @@ footer ul li a:hover {
                 </div>
             </div>
         </footer>
-
+        <script>function showImage(element) {
+            const modal = document.getElementById("modal");
+            const modalImage = document.getElementById("modal-image");
+            modal.style.display = "flex";
+            modalImage.src = element.src; // Set the source of the modal image to the clicked thumbnail
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+        </script>
+    
 </body>
 </html>
