@@ -639,6 +639,21 @@
             }
         }
     </style>
+        
+        <style>
+            /* Additional mobile-specific styling */
+            @media (max-width: 767px) {
+                .footer h5 {
+                    font-size: 1rem;
+                }
+                .footer p, .footer .nav-link {
+                    font-size: 0.9rem;
+                }
+                .footer .social-icons a {
+                    margin-right: 8px;
+                }
+            }
+        </style>
 </head>
 
 <body> <!-- First Navbar -->
@@ -904,25 +919,27 @@
     <div class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <!-- About Us Section -->
+                <div class="col-md-4 col-12">
                     <h5>About Us</h5>
-                    <p>At Unique Interiors Madurai, we make stylish interiors affordable. Our mission is to offer quality products at low prices, helping you create a home that truly reflects your style. From modern designs to durable materials, we’re here to bring your vision to life—whether it’s a small update or a complete makeover.</p>
+                    <p class="d-md-block d-none">At Unique Interiors Madurai, we make stylish interiors affordable. Our mission is to offer quality products at low prices, helping you create a home that truly reflects your style.</p>
                 </div>
-                <div class="col-md-4">
+                
+                <!-- Quick Links Section -->
+                <div class="col-md-4 col-6">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#"><i
-                            class="fas fa-home"></i> Home</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#product-list"><i class="fas fa-box"></i>
-                        Products</a> </li>
-                <li class="nav-item"> <a class="nav-link" href="#services"><i class="fas fa-cogs"></i> Services</a>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a> </li>
+                        <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#product-list"><i class="fas fa-box"></i> Products</a></li>
+                        <li class="nav-item d-md-block d-none"><a class="nav-link" href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                
+                <!-- Contact Us Section -->
+                <div class="col-md-4 col-6">
                     <h5>Contact Us</h5>
-                    <p>Email: uniqueinteriorsmdu@gmail.com</p>
+                    <p class="d-md-block d-none">Email: uniqueinteriorsmdu@gmail.com</p>
                     <p>Phone: +123456789</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -932,11 +949,15 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Footer Bottom -->
             <div class="text-center mt-4">
-                <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+                <p>&copy; 2024 Unique Interiors Madurai. All Rights Reserved.</p>
             </div>
         </div>
     </div>
+
+    
 </body>
 
 </html>
