@@ -646,6 +646,18 @@
             }
         }
     </style>
+    <style>
+        /* Styles for the image gallery */
+    
+        
+        /* Responsive behavior for screens smaller than 450px */
+        @media (max-width: 450px) {
+            .image-gallery img {
+                width: 100px; /* Smaller width for small screens */
+            }
+        }
+        </style>
+        
 </head>
 
 <body>
@@ -699,11 +711,11 @@
             </div>
         </div>
     </div>
-    <!-- <div class="image-gallery"> <img src="assets/velcrow_enhanced.jpeg" alt="Image 1" class="thumbnail"
+    <div class="image-gallery"> <img src="assets/velcrow_enhanced.jpeg" alt="Image 1" class="thumbnail"
             onclick="showImage(this)"> <img src="assets/v12a (1)_enhanced.jpg" alt="Image 2" class="thumbnail"
             onclick="showImage(this)"> </div>
     <div id="modal" class="modal" onclick="closeModal()"> <span class="close">&times;</span> <img class="modal-content"
-            id="modal-image"> </div> -->
+            id="modal-image"> </div>
     <div class="container main-container">
         <div class="row justify-content-center">
             <div class="col-md-5 photo-column"> <img src="assets/v1.jpg" alt="Fiberglass Mosquito Net Photo"> </div>
