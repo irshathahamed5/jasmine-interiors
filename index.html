@@ -748,88 +748,68 @@
             margin-top: 15px;
             color: #B68D40;
         }
-        body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-.first-navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
-}
-
-h1 {
-    font-size: 1.5rem;
-    white-space: nowrap; /* Prevent text from overflowing */
-}
-
-.social-icons {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.social-icons li {
-    margin-right: 15px;
-}
-
-.social-icons a {
-    color: #fff;
-    text-decoration: none;
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 1.2rem;
-    }
-    .social-icons li {
-        margin-right: 10px;
-    }
-}
-
     </style>
 </head>
 
 <body> <!-- First Navbar -->
-    <nav class="navbar fixed-top first-navbar navbar-light" style="background-color: #4A171E;">
-        <div class="container-fluid p-0">
-            <div class="row w-100 m-0">
-                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
-                    <h1 class="text-white text-center text-md-start">UNIQUE INTERIOR</h1>
+    <!-- <nav class="navbar fixed-top first-navbar navbar-light" style="background-color:#4A171E;">
+        <div class="container-fluid">
+            <div class="row ">
+                <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
+                    <h1>UNIQUE INTERIOR</h1>
                 </div>
-                <div class="col-12 col-md-6">
-                    <ul class="social-icons d-flex justify-content-center justify-content-md-end align-items-center flex-wrap">
-                        <li class="me-3">
-                            <a href="https://wa.me/9363267610" target="_blank">
-                                <i class="fab fa-whatsapp"></i>
-                                <span class="d-none d-md-inline"> WhatsApp</span>
-                            </a>
-                        </li>
-                        <li class="me-3">
-                            <a href="mailto:uniqueinteriorsmdu@gmail.com">
-                                <i class="fas fa-envelope"></i>
-                                <span class="d-none d-md-inline"> Email</span>
-                            </a>
-                        </li>
-                        <li class="me-3">
-                            <a href="tel:9363267610">
-                                <i class="fas fa-phone-alt"></i>
-                                <span class="d-none d-md-inline"> Mobile Number</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com/unique_interior_designer__" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                                <span class="d-none d-md-inline"> Instagram</span>
-                            </a>
-                        </li>
+                <div class="col-md-6">
+                    <ul class="social-icons d-flex justify-content-center justify-content-md-end align-items-center">
+                        <li> <a href="https://wa.me/9363267610" target="_blank"> <i class="fab fa-whatsapp"></i> <span
+                                    class="d-none d-md-inline"> WhatsApp</span> </a> </li>
+                        <li> <a href="mailto:uniqueinteriorsmdu@gmail.com"> <i class="fas fa-envelope"></i> <span
+                                    class="d-none d-md-inline"> Email</span> </a> </li>
+                        <li> <a href="tel:9363267610"> <i class="fas fa-phone-alt"></i> <span
+                                    class="d-none d-md-inline"> Mobile Number</span> </a> </li>
+                        <li> <a href="https://instagram.com/unique_interior_designer__" target="_blank"> <i
+                                    class="fab fa-instagram"></i> <span class="d-none d-md-inline"> Instagram</span>
+                            </a> </li>
                     </ul>
                 </div>
             </div>
+         </div> 
+    </nav>  -->
+    <nav class="navbar fixed-top" style="background-color: #4A171E; position: fixed; top: 0; width: 100%; z-index: 1030; padding: 0.5rem 1rem;">
+        <div class="container-fluid d-flex justify-content-between align-items-center" style="display: flex; justify-content: space-between; align-items: center;">
+            <!-- Left side: Brand name -->
+            <h1 style="color: white; margin: 0; font-size: 1.5rem; white-space: nowrap;">UNIQUE INTERIORS</h1>
+    
+            <!-- Right side: Social Icons -->
+            <ul class="social-icons" style="display: flex; align-items: center; list-style: none; padding: 0; margin: 0;">
+                <li style="margin-right: 15px;">
+                    <a href="https://wa.me/9363267610" target="_blank" style="color: white; text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span style="display: none; display: inline-block; margin-left: 5px;">WhatsApp</span>
+                    </a>
+                </li>
+                <li style="margin-right: 15px;">
+                    <a href="mailto:uniqueinteriorsmdu@gmail.com" style="color: white; text-decoration: none;">
+                        <i class="fas fa-envelope"></i>
+                        <span style="display: none; display: inline-block; margin-left: 5px;">Email</span>
+                    </a>
+                </li>
+                <li style="margin-right: 15px;">
+                    <a href="tel:9363267610" style="color: white; text-decoration: none;">
+                        <i class="fas fa-phone-alt"></i>
+                        <span style="display: none; display: inline-block; margin-left: 5px;">Mobile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/unique_interior_designer__" target="_blank" style="color: white; text-decoration: none;">
+                        <i class="fab fa-instagram"></i>
+                        <span style="display: none; display: inline-block; margin-left: 5px;">Instagram</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </nav>
-     <!-- Second Navbar -->
+    
+    <!-- Second Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark second-navbar fixed-top"
         style="background-color: #14202E; height: 100px;">
         <div class="container-fluid"> <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
@@ -1104,17 +1084,46 @@ h1 {
                 </a> </div>
         </div>
     </div> <!-- Footer -->
-    <footer class="container-fluid mt-5 p-4" id="contact" style="background-color: #333; border-radius: 10px;">
-        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row"> <!-- Phone Number --> <a
-                href="tel:9363267610" class="text-white mx-3 d-flex align-items-center"
-                style="text-decoration: none; color: #D6AD60;"> <i class="fas fa-phone-alt me-2"
-                    style="color: #D6AD60;"></i> 9363267610 </a> <!-- Email --> <a
-                href="mailto:uniqueinteriorsmdu@gmail.com" class="text-white mx-3 d-flex align-items-center"
-                style="text-decoration: none; color: #D6AD60;"> <i class="fas fa-envelope me-2"
-                    style="color: #D6AD60;"></i> uniqueinteriorsmdu@gmail.com </a> <!-- WhatsApp --> <a
-                href="https://wa.me/9363267610" target="_blank" class="text-white mx-3 d-flex align-items-center"
-                style="text-decoration: none; color: #D6AD60;"> <i class="fab fa-whatsapp me-2"
-                    style="color: #D6AD60;"></i> WhatsApp Us </a> </div>
+    <footer class="container-fluid mt-5" style="padding: 20px 0;">
+        <div class="container-fluid p-4 text-white">
+            <div class="row"> <!-- About Us Section -->
+                <div class="col-md-4 col-12">
+                    <h5 style="font-size: 18px;">About Us</h5>
+                    <p class="d-md-block d-none" style="font-size: 14px;"> At Unique Interiors Madurai, we provide
+                        premium interior work at affordable prices. Our mission is to offer high-quality products that
+                        help you create a home reflecting your unique style. </p>
+                </div> <!-- Quick Links Section -->
+                <div class="col-md-4 col-6">
+                    <h5 style="font-size: 18px;">Quick Links</h5>
+                    <ul class="list-unstyled" style="font-size: 14px;">
+                        <li class="nav-item"> <a class="nav-link active" href="#"
+                                style="color: white; text-decoration: none;"> <i class="fas fa-home"></i> Home </a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="#products-list"
+                                style="color: white; text-decoration: none;"> <i class="fas fa-box"></i> Products </a>
+                        </li>
+                        <li class="nav-item d-md-block d-none"> <a class="nav-link" href="#services"
+                                style="color: white; text-decoration: none;"> <i class="fas fa-cogs"></i> Services </a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="#contact"
+                                style="color: white; text-decoration: none;"> <i class="fas fa-envelope"></i> Contact
+                            </a> </li>
+                    </ul>
+                </div> <!-- Contact Us Section -->
+                <div class="col-md-4 col-6">
+                    <h5 style="font-size: 18px;">Contact Us</h5>
+                    <p class="d-md-block d-none" style="font-size: 14px;">Email: uniqueinteriorsmdu@gmail.com</p>
+                    <p style="font-size: 14px;">Phone: 9363267610<br>8610686234</p>
+                    <div class="social-icons"> <!-- WhatsApp --> <a href="https://wa.me/9363267610" target="_blank"
+                            style="color: #ffff; font-size: 24px; margin-right: 15px;"> <i class="fab fa-whatsapp"></i>
+                        </a> <!-- Email --> <a href="mailto:uniqueinteriorsmdu@gmail.com"
+                            style="color: #ffff; font-size: 24px; margin-right: 15px;"> <i class="fas fa-envelope"></i>
+                        </a> <!-- Instagram --> <a href="https://instagram.com/unique_interior_designer__"
+                            target="_blank" style="color: #ffff; font-size: 24px;"> <i class="fab fa-instagram"></i>
+                        </a> </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
