@@ -726,6 +726,22 @@
         margin: 0 auto;
     }
 }
+.footer-links {
+    font-size: 16px; /* Adjust the font size */
+    font-weight: 500; /* Add some weight to the font */
+    text-transform: uppercase; /* Make the text uppercase */
+    margin: 5px 0; /* Add some margin between links */
+}
+
+.footer-links a {
+    color: #ffffff; /* Set the color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Add a smooth transition on hover */
+}
+
+.footer-links a:hover {
+    color: #ff5733; /* Change color on hover */
+}
 
         .service-section {
             padding: 50px 0;
@@ -1075,46 +1091,61 @@
         </div>
     </div> <!-- Footer -->
     <footer class="container-fluid mt-5" style="padding: 20px 0;">
-        <div class="container-fluid p-4 text-white">
+        <div class="container-fluid p-3 p-md-4 text-white">
             <div class="row"> <!-- About Us Section -->
-                <div class="d-md-block d-none col-md-4 col-12">
+                <div class="col-md-4 col-12">
                     <h5 style="font-size: 18px;">About Us</h5>
-                    <p class="d-md-block d-none" style="font-size: 14px;"> At Unique Interiors Madurai, we provide
-                        premium interior work at affordable prices. Our mission is to offer high-quality products that
-                        help you create a home reflecting your unique style. </p>
+                    <p class="d-md-block d-none" style="font-size: 14px;">
+                        At Unique Interiors Madurai, we provide premium interior work at affordable prices.
+                        Our mission is to offer high-quality products that help you create a home reflecting your unique style.
+                    </p>
                 </div> <!-- Quick Links Section -->
-                <div class="col-md-4 col-6">
+                <div class="col-md-4 col-12">
                     <h5 style="font-size: 18px;">Quick Links</h5>
-                    <ul class="list-unstyled" style="font-size: 14px;">
-                        <li class="nav-item"> <a class="nav-link active" href="#"
-                                style="color: white; text-decoration: none;"> <i class="fas fa-home"></i> Home </a>
+                    <ul class="list-unstyled footer-links">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="fas fa-home"></i> Home
+                            </a>
                         </li>
-                        <li class="nav-item"> <a class="nav-link" href="#products-list"
-                                style="color: white; text-decoration: none;"> <i class="fas fa-box"></i> Products </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products-list">
+                                <i class="fas fa-box"></i> Products
+                            </a>
                         </li>
-                        <li class="nav-item d-md-block d-none"> <a class="nav-link" href="#services"
-                                style="color: white; text-decoration: none;"> <i class="fas fa-cogs"></i> Services </a>
+                        <li class="nav-item d-md-block d-none">
+                            <a class="nav-link" href="#services">
+                                <i class="fas fa-cogs"></i> Services
+                            </a>
                         </li>
-                        <li class="nav-item"> <a class="nav-link" href="#contact"
-                                style="color: white; text-decoration: none;"> <i class="fas fa-envelope"></i> Contact
-                            </a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                <i class="fas fa-envelope"></i> Contact
+                            </a>
+                        </li>
                     </ul>
                 </div> <!-- Contact Us Section -->
-                <div class="col-md-4 col-6">
+                <div class="col-md-4 col-12">
                     <h5 style="font-size: 18px;">Contact Us</h5>
                     <p class="d-md-block d-none" style="font-size: 14px;">Email: uniqueinteriorsmdu@gmail.com</p>
                     <p style="font-size: 14px;">Phone: 9363267610</p>
-                    <div class="social-icons"> <!-- WhatsApp --> <a href="https://wa.me/9363267610" target="_blank"
-                            style="color: #ffff; font-size: 24px; margin-right: 15px;"> <i class="fab fa-whatsapp"></i>
-                        </a> <!-- Email --> <a href="mailto:uniqueinteriorsmdu@gmail.com"
-                            style="color: #ffff; font-size: 24px; margin-right: 15px;"> <i class="fas fa-envelope"></i>
-                        </a> <!-- Instagram --> <a href="https://instagram.com/unique_interior_designer__"
-                            target="_blank" style="color: #ffff; font-size: 24px;"> <i class="fab fa-instagram"></i>
-                        </a> </div>
+                    <div class="social-icons">
+                        <a href="https://wa.me/9363267610" target="_blank" style="color: #ffff; font-size: 24px; margin-right: 15px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:uniqueinteriorsmdu@gmail.com" style="color: #ffff; font-size: 24px; margin-right: 15px;">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://instagram.com/unique_interior_designer__" target="_blank" style="color: #ffff; font-size: 24px;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    
+    
 </body>
 
 </html>
