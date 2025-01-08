@@ -608,6 +608,22 @@
             background-color: #1f2d3b;
             /* Hover effect color */
         }
+/* Custom Class to Center Cards on Mobile View */
+.center-cards-mobile .card {
+    margin: 0 auto; /* Centers the card */
+    display: block; /* Makes the card block-level for centering */
+}
+
+/* Responsive media query to apply on smaller screens (mobile) */
+@media (max-width: 768px) {
+    .center-cards-mobile .col-md-4 {
+        display: flex; /* Flexbox for proper alignment */
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center; /* Aligns the card vertically in the container */
+        flex-direction: column; /* Stacks the cards vertically */
+        margin-bottom: 20px; /* Adds some space between cards */
+    }
+}
 
         .banner {
             height: 500px;
@@ -830,7 +846,7 @@
         </div>
     </div> <!-- Products Section one-->
     <div class="container-fluid mt-5" id="mosquito">
-        <div class="row">
+        <div class="row center-cards-mobile">
             <center>
                 <h1>Mosquito Net</h1>
             </center>
@@ -903,7 +919,7 @@
         </div>
     </div>
     <div class="container-fluid mt-5" id="CurtainRoads">
-        <div class="row">
+        <div class="row center-cards-mobile">
             <center>
                 <h1>Curtain Rods</h1>
             </center>
@@ -943,7 +959,7 @@
         </div>
     </div>
     <div class="container-fluid mt-5" id="blinds">
-        <div class="row">
+        <div class="row center-cards-mobile" >
             <center>
                 <h1>Blinds</h1>
             </center>
@@ -980,7 +996,7 @@
         </div>
     </div>
     <div class="container-fluid mt-5" id="wallpaper">
-        <div class="row">
+        <div class="row center-cards-mobile">
             <center>
                 <h1>Wallpapers</h1>
             </center>
@@ -1000,7 +1016,7 @@
         </div>
     </div>
     <div class="container-fluid mt-5" id="Flooring">
-        <div class="row">
+        <div class="row center-cards-mobile">
             <center>
                 <h1>Flooring</h1>
             </center>
@@ -1083,7 +1099,7 @@
                         At Unique Interiors Madurai, we provide premium interior work at affordable prices.
                         Our mission is to offer high-quality products that help you create a home reflecting your unique style.
                     </p>
-                </div> <!-- Quick Links Section -->
+                </div> <!-- Quick Links Sections -->
                 <div class="col-md-4 col-12">
                     <h5 style="font-size: 18px;">Quick Links</h5>
                     <ul class="list-unstyled footer-links">
